@@ -1,13 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="main">
-        <p>Team 2 Washer Management System</p>
-      </header>
-    </div>
-  );
+import Home from "../Home";
+import Order from "../Order";
+import Edit from "../Edit";
+
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="wrapper">
+          <Route path="/" exact={true} component={Home} />
+          <Route path="/order" component={Order} />
+          <Route path="/edit/:id" component={Edit} />
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
