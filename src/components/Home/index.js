@@ -1,9 +1,8 @@
 import React from "react";
 import WasherList from "./WasherList";
-import Search from "./Search";
-import { Button, AutoComplete } from "antd";
-// import bg from "../../images/bg.png";
-import { isAbsolute } from "path";
+// import Search from "./Search";
+//
+// import { isAbsolute } from "path";
 
 const title = {
   color: "#110A33",
@@ -15,7 +14,6 @@ const title = {
 
 class Home extends React.Component {
   render() {
-    const { machineId } = this.props;
     return (
       <div className="home">
         {/* <img src={bg} /> */}
@@ -26,7 +24,6 @@ class Home extends React.Component {
         {/* <Search /> */}
 
         <WasherList />
-        <Button type="primary">prime</Button>
       </div>
     );
   }
