@@ -1,65 +1,31 @@
 import React from "react";
-import WasherUnit from "./WasherUnit.js";
-// import { isTSTypeAliasDeclaration } from "@babel/types";
+import WasherList from "./WasherList";
+// import Search from "./Search";
+//
+// import { isAbsolute } from "path";
 
-import { Button } from "antd";
-
-const washers = [
-  {
-    machineId: "1",
-    userId: "a",
-    availability: true,
-    startTime: "1234",
-    endTime: "456"
-  },
-  {
-    machineId: "2",
-    userId: "b",
-    availability: false,
-    startTime: "1234",
-    endTime: "456"
-  },
-  {
-    machineId: "3",
-    userId: "c",
-    availability: true,
-    startTime: "1234",
-    endTime: "456"
-  }
-];
-const list = {
-  fontsize: 29,
-  marginLeft: 70
+const title = {
+  color: "#110A33",
+  margin: 0,
+  marginTop: 50,
+  marginLeft: 40,
+  fontSize: 50
 };
 
-const each = {
-  fontsize: 10,
-  marginLeft: 50
-};
-
-class WasherList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
+class Home extends React.Component {
   render() {
     return (
-      <div>
-        <h1 style={list}>
-          <span>List of Washers</span>
+      <div className="home">
+        {/* <img src={bg} /> */}
+        <h1 style={title}>
+          <span> Laundry Room Service</span>
         </h1>
-        <div className="washers-container" style={each}>
-          {washers.map(washer => (
-            <div className="washer-form" key={washer.machineId}>
-              <WasherUnit washer={washer} />
-              <Button type="primary">open</Button>
-            </div>
-          ))}
-        </div>
+
+        {/* <Search /> */}
+
+        <WasherList />
       </div>
     );
   }
 }
-
-export default WasherList;
+export default Home;
