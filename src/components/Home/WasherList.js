@@ -1,31 +1,76 @@
 import React from "react";
-import WasherList from "./WasherList";
-// import Search from "./Search";
-//
-// import { isAbsolute } from "path";
+import WasherUnit from "./WasherUnit.js";
+// import { isTSTypeAliasDeclaration } from "@babel/types";
 
-const title = {
-  color: "#110A33",
-  margin: 0,
-  marginTop: 50,
-  marginLeft: 40,
-  fontSize: 50
+import { Button } from "antd";
+import { List, Card } from "antd";
+
+const washers = [
+  {
+    machineId: "1",
+    userId: "a",
+    availability: true,
+    startTime: "1234",
+    endTime: "456"
+  },
+  {
+    machineId: "2",
+    userId: "b",
+    availability: false,
+    startTime: "1234",
+    endTime: "456"
+  },
+  {
+    machineId: "3",
+    userId: "c",
+    availability: true,
+    startTime: "1234",
+    endTime: "456"
+  }
+];
+const list = {
+  fontsize: 29,
+  marginLeft: 70
 };
 
-class Home extends React.Component {
+const each = {
+  fontsize: 10,
+  marginLeft: 50
+};
+
+class WasherList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  handleReserve = () => {
+    console.log("machine id");
+  };
   render() {
     return (
-      <div className="home">
-        {/* <img src={bg} /> */}
-        <h1 style={title}>
-          <span> Laundry Room Service</span>
+      <div>
+        <h1 style={list}>
+          <span>List of Washers</span>
         </h1>
-
-        {/* <Search /> */}
-
-        <WasherList />
+        <div className="washers-container">
+          <List
+            grid={{ gutter: 30, column: 5 }}
+            dataSource={washers}
+            renderItem={washer => (
+              <List.Item>
+                <div className="washer-card">
+                  <WasherUnit washer={washer} />
+                  <Button type="primary" onClick={this.handleReserve}>
+                    reserve
+                  </Button>
+                </div>
+              </List.Item>
+            )}
+          />
+        </div>
       </div>
     );
   }
 }
-export default Home;
+
+export default WasherList;
