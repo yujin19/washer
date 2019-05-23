@@ -1,4 +1,9 @@
+@import "~antd/dist/antd.css";
+
 body {
+  background-color: rgb(184, 211, 192);
+  background-image: url("./images/bg.png");
+  background-position: top;
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
