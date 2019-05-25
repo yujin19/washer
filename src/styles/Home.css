@@ -1,0 +1,18 @@
+.btn {
+  font-size: 15px;
+  /* padding: 15px 28px; */
+  position: relative;
+  left: 30px;
+}
+.btn:hover {
+  background-color: #060f8a;
+  color: white;
+}
+.btn:active {
+  background-color: #0043d3;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+/* button {
+  ;
+} */

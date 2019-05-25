@@ -46,6 +46,7 @@ class WasherList extends React.Component {
   handleReserve = () => {
     console.log("machine id");
   };
+
   render() {
     return (
       <div>

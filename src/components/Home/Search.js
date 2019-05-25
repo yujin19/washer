@@ -35,7 +35,8 @@ class Search extends Component {
           onChange={this.sexChange}
           value={this.state.sex}
         >
-          <option value="M">Male</option>
+          {/* {timeSlot.map(() => {})} */}
+          <option value="M" />
           <option value="F">Female</option>
         </select>
       </div>
