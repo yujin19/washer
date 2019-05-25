@@ -1,6 +1,5 @@
 import React from "react";
 import WasherUnit from "./WasherUnit.js";
-// import { isTSTypeAliasDeclaration } from "@babel/types";
 
 import { Button, message, Alert, Progress } from "antd";
 import { List, Card } from "antd";
