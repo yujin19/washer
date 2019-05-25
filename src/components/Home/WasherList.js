@@ -72,7 +72,7 @@ class WasherList extends React.Component {
         </h1>
         <div className="washers-container">
           <List
-            grid={{ gutter: 30, column: 4 }}
+            grid={{ gutter: 40, column: 4 }}
             dataSource={washers}
             renderItem={washer => (
               <List.Item>

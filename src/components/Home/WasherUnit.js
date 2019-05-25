@@ -40,7 +40,9 @@ class WasherUnit extends React.Component {
   triggleProgress = () => {
     this.startBtn = (
       <div>
+        <br />
         <Button
+          className="btn"
           type="primary"
           loading={this.state.loading}
           onClick={() => this.handleReserve(this.state.washer.machine_id)}
@@ -52,7 +54,7 @@ class WasherUnit extends React.Component {
     this.progressBtn = (
       <div>
         <Progress percent={this.state.timepercent} />
-        <Button type="primary" loading={this.state.loading}>
+        <Button className="btn" type="primary" loading={this.state.loading}>
           Loading
         </Button>
       </div>
@@ -67,7 +69,9 @@ class WasherUnit extends React.Component {
           okText="Yes"
           cancelText="No"
         >
-          <Button type="primary">pickup</Button>
+          <Button className="btn" type="primary">
+            pickup
+          </Button>
         </Popconfirm>
       </div>
     );
@@ -148,7 +152,7 @@ class WasherUnit extends React.Component {
     const content = (
       <div>
         {/* <p>{"User Id: " + washer.userId}</p> */}
-        <p>{"Availability: " + washer.availability}</p>
+        <p>{washer.availability ? "Available Now" : "Occupied"}</p>
         {/* <p>{"Start Time: " + washer.startTime}</p>
       <p>{"End Time: " + washer.endTime}</p> */}
       </div>

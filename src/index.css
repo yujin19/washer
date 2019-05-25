@@ -1,5 +1,5 @@
 @import "~antd/dist/antd.css";
-
+@import "./styles/Home.css";
 body {
   background-color: rgb(184, 211, 192);
   background-image: url("./images/bg.png");
