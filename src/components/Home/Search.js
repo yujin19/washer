@@ -1,14 +1,24 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import React, { Component } from "react";
 
 class Search extends Component {
   constructor(props) {
     super(props);
-    this.state = { input: "" };
+    this.state = { input: "", timeSlot: [] };
   }
   handleInput = e => {
     this.setState({ input: e.target.value });
     //this.props.onSearch(e.target.value);
+  };
+  getTimeSlot = () => {
+    var hour = new Date().getHours();
+    let timeslot = [];
+    for (let i = 0; i < 22 - hour; i++) {
+      timeslot.push(hour + i + 1);
+    }
+    this.setState({
+      timeSlot: timeslot
+    });
   };
   submit = e => {
     e.preventDefault();
@@ -17,23 +27,17 @@ class Search extends Component {
   };
   render() {
     return (
-      <div className="search">
-        <nav className="navbar navbar-light bg-light justify-content-between">
-          <form className="form-inline" onSubmit={this.submit}>
-            <div className="form-group row">
-              <label className="search-label">Search</label>
-              <input
-                className="form-control mr-sm-2"
-                type="search"
-                id="search"
-                placeholder="Search"
-                aria-label="Search"
-                value={this.state.input}
-                onChange={this.handleInput}
-              />
-            </div>
-          </form>
-        </nav>
+      <div>
+        <label>Select time slot</label>
+        <select
+          className="form-control"
+          id="sex"
+          onChange={this.sexChange}
+          value={this.state.sex}
+        >
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+        </select>
       </div>
     );
   }
