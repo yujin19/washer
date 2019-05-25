@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const WasherUnit = props => {
   return (
     <li>
-      <span>Washer #</span>
+      <span>Machine #</span>
       <span>Occupied?</span>
       <span>Time</span>
       <span>Report issue</span>
