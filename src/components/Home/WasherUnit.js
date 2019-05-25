@@ -7,7 +7,7 @@ const images = [avaiwasher, unavaiwasher];
 const user_id = "1111";
 
 const imageStyle = {
-  height: 100
+  height: 150
 };
 
 class WasherUnit extends React.Component {
@@ -121,10 +121,10 @@ class WasherUnit extends React.Component {
         interval_id: interval_id
       };
     });
-    console.log("ss", period / 100);
+    console.log("second", period / 100);
   };
   handleProgress = () => {
-    console.log("eachtime", 111);
+    console.log("counter");
     this.setState(preState => ({
       timepercent: preState.timepercent + 1
     }));

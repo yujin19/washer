@@ -20,44 +20,6 @@ class WasherList extends React.Component {
     };
   }
 
-  // handleReserve = washer_id => {
-  //   console.log("machine id", washer_id);
-  //   console.log(this.state.washers);
-  //   fetch(
-  //     `${API_ROOT}/initiatetask?user_id=${user_id}&machine_id=${washer_id}`,
-  //     {
-  //       method: "POST"
-  //     }
-  //   )
-  //     .then(response => {
-  //       if (response.ok) {
-  //         return response.json();
-  //       }
-  //       throw new Error("Failed");
-  //     })
-  //     .then(response => {
-  //       console.log("hello", response);
-
-  //       const startTime = response[0].start_time;
-  //       const endTime = response[0].end_time;
-  //       const machine_id = response[0].machine_id;
-  //       this.handleBegin(startTime, endTime, machine_id);
-  //     })
-  //     .catch(e => {
-  //       console.log(e);
-  //     });
-  // };
-  // handleBegin = (startTime, endTime, machine_id) => {
-  //   const period = (Date.parse(endTime) - Date.parse(startTime)) * 0.001;
-  //   const washer_index = Number(machine_id) - 1;
-  //   this.setState(preState => {
-  //     preState.washers[washer_index].availability = false;
-  //     const washers = preState.washers;
-  //     return {
-  //       washers
-  //     };
-  //   });
-  // };
   componentWillMount() {
     //checkavailability
     fetch(`${API_ROOT}/checkavailability`, {
@@ -101,8 +63,6 @@ class WasherList extends React.Component {
     //   );
   }
   render() {
-    // console.log(this.state.washers);
-
     const washers = this.state.washers;
 
     return (
