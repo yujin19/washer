@@ -1,6 +1,6 @@
 import React from "react";
 import WasherList from "./WasherList";
-// import Search from "./Search";
+import Search from "./Search";
 //
 // import { isAbsolute } from "path";
 
@@ -22,7 +22,6 @@ class Home extends React.Component {
         </h1>
 
         {/* <Search /> */}
-
         <WasherList />
       </div>
     );

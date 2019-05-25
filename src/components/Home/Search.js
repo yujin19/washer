@@ -17,24 +17,25 @@ class Search extends Component {
   };
   render() {
     return (
-      <div className="search">
-        <nav className="navbar navbar-light bg-light justify-content-between">
-          <form className="form-inline" onSubmit={this.submit}>
-            <div className="form-group row">
-              <label className="search-label">Search</label>
-              <input
-                className="form-control mr-sm-2"
-                type="search"
-                id="search"
-                placeholder="Search"
-                aria-label="Search"
-                value={this.state.input}
-                onChange={this.handleInput}
-              />
-            </div>
-          </form>
-        </nav>
-      </div>
+      // <div className="search">
+      //   <nav className="navbar navbar-light bg-light justify-content-between">
+      //     <form className="form-inline" onSubmit={this.submit}>
+      //       <div className="form-group row">
+      //         <label className="search-label">Search</label>
+      //         <input
+      //           className="form-control mr-sm-2"
+      //           type="search"
+      //           id="search"
+      //           placeholder="Search"
+      //           aria-label="Search"
+      //           value={this.state.input}
+      //           onChange={this.handleInput}
+      //         />
+      //       </div>
+      //     </form>
+      //   </nav>
+      // </div>
+      <div />
     );
   }
 }
