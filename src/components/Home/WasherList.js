@@ -67,7 +67,7 @@ class WasherList extends React.Component {
     return (
       <div>
         <h1 style={list}>
-          <span>List of Washers</span>
+          <span>Welcome, Team2!</span>
         </h1>
         <div className="washers-container">
           <List
